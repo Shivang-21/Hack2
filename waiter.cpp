@@ -1,4 +1,5 @@
 #include<iostream>
+#include<bits/stdc++.h>
 #include<stack>
 using namespace std;
 int main()
@@ -16,7 +17,7 @@ int main()
     while(a<Q)
     {
         stack<int> temp;
-        while(!Stack.empty())
+        while(Stack.empty()!=false)
         {
             if(Stack.top()%p==0)
             {
@@ -29,10 +30,10 @@ int main()
             Stack.pop();
         }
         Stack=temp;
-        a++;
+        a+=1;
         p=prime[a];
     }
-    for(i=0;i<Q;i++)
+    for(i=0;i<Q;i+=1)
     {
         while(!v[i].empty())
         {
@@ -40,7 +41,7 @@ int main()
             v[i].pop();
         }
     }
-    while(!Stack.empty())
+    while(Stack.empty()!=false)
     {
         printf("%d\n",Stack.top());
         Stack.pop();
